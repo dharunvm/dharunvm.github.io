@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+            <link rel="shortcut icon" type="image/png" href="favicon.jpg">
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+            <title>TURBO CODER</title>
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" >
+        <title>TURBO Coder</title>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <style>
+            li.main3 a{
+            background-color:aliceblue;
+            color:black;
+        }</style>
+        <header>
+            <div><img class="logo"src="logo.png"></div>
+            <div class="mainframe">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="main3"><a href="#">Currency</a></li>
+                    <li><a href="length.html">length</a></li>
+                    <li><a href="mass.html">Mass</a></li>
+                    <li><a href="number.html">Number</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="tagline">
+                <h1>CURRENCY CONVERTOR</h1>
+            </div>
+            <div class="numlist">
+                <ul>
+                    <li>Dollar</li>
+                    <li>Rupee</li>
+                    <li>Euro</li>
+               
+                </ul>
+            </div>
+            <div class="inputbox">
+                <ul>
+                        <li><input id="dollar" oninput="calcdollar()" onchange="calcdollar()" type="number" placeholder="0"></li>
+                        <li><input id="rupee" oninput="calcrupee()" onchange="calcrupee()" type="number" placeholder="0"></li>
+                        <li><input id="euro" oninput="calceuro()" onchange="calceuro()" type="number" placeholder="0"></li>
+                        
+                    
+                </ul>
+            </div>
+        </header>
+            <script>
+                var dollar=document.getElementById('dollar')
+                var rupee=document.getElementById('rupee')
+                var euro=document.getElementById('euro')
+        
+                function calcdollar(){
+                    rupee.value=dollar.value*69.24
+                    euro.value=dollar.value*0.89
+                }
+                function calcrupee(){
+                    dollar.value=rupee.value/69.24
+                    euro.value=rupee.value/77.72
+                }
+                function calceuro(){
+                    dollar.value=euro.value/0.89
+                    rupee.value=euro.value*77.72
+                }
+            </script>
+    </body>
+</html>

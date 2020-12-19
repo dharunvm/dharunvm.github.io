@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+            <link rel="shortcut icon" type="image/png" href="favicon.jpg">
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+            <title>TURBO CODER</title>
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" >
+        <title>TURBO Coder</title>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <style>
+            li.main4 a{
+            background-color:aliceblue;
+            color:black;
+        }</style>
+        <header>
+            <div><img class="logo"src="logo.png"></div>
+            <div class="mainframe">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="currency.html">Currency</a></li>
+                    <li><a href="length.html">length</a></li>
+                    <li class="main4"><a href="#">Mass</a></li>
+                    <li><a href="number.html">Number</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="tagline">
+                <h1>MASS CONVERTOR</h1>
+            </div>
+            <div class="numlist">
+                <ul>
+                    <li>Gram</li>
+                    <li>Kilogram</li>
+                    <li>Pounds</li>
+                    
+                </ul>
+            </div>
+            <div class="inputbox">
+                <ul>
+                        <li><input type="number" id="gram" oninput="calcbyG()" onchange="calcbyG()" placeholder="0"></li>
+                        <li><input type="number" id="kilogram" oninput="calcbyKG()" onchange="calcbyKG()" placeholder="0"></li>
+                        <li><input type="number" id="tons" oninput="calcbyT()" onchange="calcbyT()" placeholder="0"></li>
+                                        
+                </ul>
+            </div>
+        </header>
+            <script>
+                var g=document.getElementById('gram')
+                var kg=document.getElementById('kilogram')
+                var ton=document.getElementById('tons')
+                
+                function calcbyG(){
+                    kg.value=g.value/1000
+                    ton.value=g.value/453.592
+                }
+                function calcbyKG(){
+                    g.value=kg.value*1000
+                    ton.value=kg.value*2.205
+                }
+                function calcbyT(){
+                    g.value=ton.value*453.592
+                    kg.value=ton.value/2.205
+                }
+            </script>
+    </body>
+</html>

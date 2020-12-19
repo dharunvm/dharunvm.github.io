@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CONVERTOR</title>
+
+    </head>
+    <body>
+        Celcius<input type="number" id="celcius" placeholder="enter celcius" /><br>
+        Fahrenheit<input type="number" id="fahrenheit" placeholder="enter celcius" disabled />
+        <input type="button"  onclick="calc()">
+
+        <script>
+            alert("ok")
+            var cel=document.getElementById('celcius')
+                var far=document.getElementById('fahrenheit')
+            function calc()
+            {
+                alert("done")
+                
+                far.value=(cel.value+32)
+            }
+        </script>
+    </body>
+</html>

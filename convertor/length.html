@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+            <link rel="shortcut icon" type="image/png" href="favicon.jpg">
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+            <title>TURBO CODER</title>
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" >
+        <title>TURBO Coder</title>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        
+    </head>
+    <body>
+        <style>
+            li.main2 a{
+            background-color:aliceblue;
+            color:black;
+        }</style>
+        <header>
+            <div><img class="logo"src="logo.png"></div>
+            <div class="mainframe">
+                <ul>
+                   <li><a href="index.html">Home</a></li>
+                    <li><a href="currency.html">Currency</a></li>
+                    <li class="main2"><a href="#">length</a></li>
+                    <li><a href="mass.html">Mass</a></li>
+                    <li><a href="number.html">Number</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="tagline">
+                <h1>LENGTH CONVERTOR</h1>
+            </div>
+            <div class="numlist">
+                <ul>
+                    <li>Centimeter</li>
+                    <li>Meter</li>
+                    <li>Inches</li>
+                    <li>Kilometer</li>
+                </ul>
+            </div>
+            <div class="inputbox">
+                <ul>
+                        <li><input type="number" oninput="calcbycm()" onchange="calcbycm()"   placeholder="0" id="centimetre"></li>
+                        <li><input type="number" oninput="calcbym()" onchange="calcbym()" placeholder="0" id="metre" ></li>
+                        <li><input type="number" oninput="calcbyinch()" onchange="calcbyinch()" placeholder="0" id="inches"></li>
+                        <li><input type="number" oninput="calcbykm()" onchange="calcbykm()" placeholder="0" id="kilometre"></li>
+                    
+                </ul>
+            </div>
+        </header>
+        <script>
+                var cm=document.getElementById('centimetre')
+                var m=document.getElementById('metre')
+                var inch=document.getElementById('inches')
+                var km=document.getElementById('kilometre')
+
+
+                function calcbycm()
+                {
+                    
+                    m.value=cm.value / 100
+                    inch.value=cm.value/2.54
+                    km.value=cm.value/100000
+                }
+                function calcbym()
+                {
+                    
+                    cm.value=m.value*100
+                    inch.value=m.value*39.37
+                    km.value=m.value/1000
+
+                }
+                function calcbyinch()
+                {
+                   cm.value=inch.value*2.54
+                   m.value=inch.value/39.37
+                   km.value=inch.value/39370.079
+                }
+                function calcbykm()
+                {
+                    cm.value=km.value*100000
+                    m.value=km.value*1000
+                    inch.value=km.value*39370.079
+                }
+
+        </script>
+    </body>
+</html>
